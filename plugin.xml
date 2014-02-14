@@ -12,6 +12,7 @@
     <author>Vlad Stirbu</author>
     <keywords>zeroconf</keywords>
     <license>MIT</license>
+    <info></info>
   
     <js-module src="www/ZeroConf.js" name="zeroconf">
         <clobbers target="ZeroConf" />
@@ -34,5 +35,15 @@
         <source-file src="src/android/ZeroConf.java" target-dir="src/com/triggertrap" />
 
     </platform>
-    <info></info>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ZeroConf">
+                <param name="ios-package" value="ZeroConf" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/ZeroConf.h" />
+        <source-file src="src/ios/ZeroConf.m" />
+    </platform>
 </plugin>
